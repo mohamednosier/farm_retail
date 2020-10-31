@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.nfc.connect.nfc.Truck.LoadAndUnLoadActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:gravity="center"
+
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/half_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_centerHorizontal="true"
+
+        >
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:layout_marginTop="70dp"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:text="تحميل او تفريغ "
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="تحميل"
+        android:id="@+id/load"
+        android:textColor="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_radiusa"/>
+
+    <Button
+        android:textColor="#fff"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/load"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="تفريغ"
+        android:id="@+id/unload"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_radiusa"/>
+    <Button
+        android:textColor="#fff"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/unload"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="استعلام"
+        android:id="@+id/check_Data"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_radiusa"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:id="@+id/test_data"
+        android:layout_below="@+id/check_Data"/>
+</RelativeLayout>

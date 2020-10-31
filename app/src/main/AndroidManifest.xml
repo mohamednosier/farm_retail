@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.connect.nfc">
+
+    <uses-permission android:name="android.permission.NFC" /> <!-- <uses-permission android:name="android.permission.CAMERA"/> -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+    <!--android:name="com.nfc.connect.nfc.MyApplication"-->
+    <application
+
+        android:allowBackup="true"
+        android:icon="@drawable/malyan1"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon, android:theme">
+        <activity android:name="com.nfc.connect.nfc.ScannerActivity"></activity>
+        <activity android:name="com.nfc.connect.nfc.Truck.CheckDataActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.nfc.connect.nfc.Retailer.ProductLoad_RetailerTotalActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.nfc.connect.nfc.Farm.ProductLoad_FarmTotalActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="com.nfc.connect.nfc.Retailer.ProductLoadResult_RetailerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="com.nfc.connect.nfc.Retailer.ProductLoad_RetailerPieceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="com.nfc.connect.nfc.Retailer.Product_RetailerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="com.nfc.connect.nfc.Farm.ProductLoadResult_FarmActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+
+            android:theme="@style/myDialog" />
+        <activity android:name="com.nfc.connect.nfc.Retailer.RetailerActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=      "com.nfc.connect.nfc.Farm.ProductLoad_FarmPieceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.nfc.connect.nfc.Farm.Product_FarmActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.nfc.connect.nfc.Farm.FarmActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.nfc.connect.nfc.Truck.LoadAndUnLoadActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.nfc.connect.nfc.Truck.TruckLoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="com.nfc.connect.nfc.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.nfc.connect.nfc.TestActivity" />
+        <activity
+            android:name="com.nfc.connect.nfc.Truck.TruckActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.nfc.connect.nfc.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.nfc.action.NDEF_DISCOVERED" /> -->
+
+
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+
+
+            <!-- <data android:mimeType="text/plain" /> -->
+            <!-- </intent-filter> -->
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+
+        <receiver
+            android:name="com.nfc.connect.nfc.ConnectivityChangeReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

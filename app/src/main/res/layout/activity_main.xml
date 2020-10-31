@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+     />
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    android:paddingTop="@dimen/activity_vertical_margin"
+
+  >
+
+    <LinearLayout
+
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/penta"
+            />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="مرحبا بكم في مليان"
+            android:textSize="50dp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/linear1"
+        android:textColor="@color/colorAccent"
+        android:text="ضع التاج امام الفون "
+        android:textSize="40dp"/>
+
+
+
+
+
+
+    <TextView
+        android:layout_below="@+id/text1"
+        android:gravity="right"
+        android:text="اختار نوع الطعام من الاسفل "
+        android:textSize="20dp"
+        android:id="@+id/choose_saloon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Spinner
+        android:gravity="left"
+
+        android:background="@drawable/spinner"
+        android:spinnerMode="dropdown"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/choose_saloon"
+        android:id="@+id/spinner2"
+        android:layout_width="fill_parent"
+        android:prompt="@string/type_prompt"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:gravity="right"
+        android:layout_alignParentLeft="true"
+        android:text="اختار الصنف من الاسفل "
+        android:textSize="20dp"
+        android:id="@+id/choose_branche"
+        android:layout_below="@+id/spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Spinner
+        android:background="@drawable/spinner"
+        android:layout_below="@+id/choose_branche"
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:prompt="@string/classification_prompt"
+        android:layout_height="wrap_content"/>
+
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/farm_id"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner"
+        android:textSize="30dp"
+        android:textColor="#fff"
+        android:text="كود المزرعه F1000001"/>
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/truck_id"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/farm_id"
+        android:textSize="30dp"
+        android:textColor="#fff"
+        android:text="كود الشاحنه T1000001"/>
+
+
+    <LinearLayout
+
+        android:layout_below="@+id/nfc_contents"
+
+        android:id="@+id/linear2"
+        android:gravity="center"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/counter_no"
+           android:text="0"
+            android:textSize="40dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_gravity="center"
+            android:background="@drawable/border_blue"
+            android:textStyle="bold"
+            android:id="@+id/counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:textColor="#0000FF"
+            android:text=" اجمالي عدد الصناديق  "
+            android:textSize="40dp"/>
+    </LinearLayout>
+
+    <Button
+
+        android:id="@+id/refuse"
+        android:layout_below="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="رفض"
+
+        android:textSize="40dp"/>
+
+
+    <LinearLayout
+
+
+
+        android:id="@+id/linear5"
+        android:gravity="center"
+        android:layout_below="@+id/refuse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/counter_no_efused"
+            android:text="0"
+            android:textSize="40dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/counter_refused"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:textColor="#fff"
+            android:text=" تم رفض عدد صناديق   "
+            android:textSize="40dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+
+
+
+        android:id="@+id/linear6"
+        android:gravity="center"
+        android:layout_below="@+id/linear5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/counter_no_general"
+            android:text="0"
+            android:textSize="40dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/counter_general"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:textColor="#fff"
+            android:text="اجمالي الحموله الحاليه "
+            android:textSize="40dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+android:visibility="gone"
+android:id="@+id/line4"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_below="@+id/truck_id">
+
+        <EditText
+            android:id="@+id/edit_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:lineSpacingMultiplier="2"
+
+            android:hint="message" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Write" />
+    </LinearLayout>
+    <TextView
+        android:layout_below="@+id/line4"
+        android:id="@+id/nfc_contents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calculate_id"
+        android:text="calculate_id"
+        android:layout_below="@+id/linear6"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/save"
+        android:text="save"
+        android:layout_below="@+id/calculate_id"
+        />
+    <Button
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/retrieve"
+        android:text="retrieve"
+        android:layout_below="@+id/save"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/load"
+        android:text="load"
+
+        android:visibility="gone"
+        android:layout_below="@+id/retrieve"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reset"
+        android:text="reset"
+        android:visibility="gone"
+
+        android:layout_below="@+id/load"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/finish"
+        android:text="تحميل الصور"
+        android:visibility="gone"
+
+        android:layout_below="@+id/reset"
+        />
+
+    <LinearLayout
+        android:layout_below="@+id/finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/relativeLayout"
+        android:gravity="center"></LinearLayout>
+</RelativeLayout>
+</ScrollView>

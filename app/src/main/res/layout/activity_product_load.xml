@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nfc.connect.nfc.Farm.ProductLoad_FarmPieceActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:gravity="center"
+
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/half_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_centerHorizontal="true"
+
+        >
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:layout_marginTop="40dp"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:text="تحميل "
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/farm_back2"
+        android:layout_marginLeft="40dp"
+        android:src="@drawable/img_back"
+        android:layout_marginTop="40dp"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:text="تسجيل المزرعه "
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content" />
+    <com.jesusm.holocircleseekbar.lib.HoloCircleSeekBar
+        android:layout_marginTop="100dp"
+        android:id="@+id/pp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        app:max="50"
+
+        app:pointer_color="#ff3333"
+        app:pointer_halo_color="#b9e6ea"
+
+        app:text_color="@color/colorAccent"
+        app:text_size="65sp"
+        app:wheel_active_color="#ffff00"
+        app:wheel_unactive_color="#f1d5e6" />
+
+
+    <Button
+
+        android:layout_below="@+id/pp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+android:layout_centerHorizontal="true"
+
+        android:text="    رفض اخر عنصر   "
+        android:id="@+id/refuse_last"
+        android:textColor="#43B649"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_radiusb"/>
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_below="@+id/refuse_last"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/linear_shadow">
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="10dp"
+
+                android:text="0" />
+            <TextView
+
+                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@+id/image1"
+                android:layout_marginRight="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="مفحوص "/>
+<ImageView
+    android:id="@+id/image1"
+    android:layout_alignParentRight="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/img_total"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_height="25dp"
+            android:layout_width="match_parent"
+
+            >
+
+            <TextView
+                android:id="@+id/available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="0" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp"
+                android:layout_toLeftOf="@+id/image2"
+                android:text="محمل " />
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_available1"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/refused"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="10dp"
+                android:text="0" />
+            <TextView
+
+                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@+id/image3"
+                android:layout_marginRight="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="مرفوض "/>
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_refused"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+<RelativeLayout
+    android:id="@+id/relativ3"
+    android:layout_below="@+id/linear1"
+    android:orientation="horizontal"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="20dp"
+
+    android:layout_marginBottom="40dp"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+
+
+android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="اعاده تحميل"
+        android:id="@+id/reset_load"
+        android:textColor="#fff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_radius"/>
+    <Button
+
+
+android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="انهاء التحميل"
+        android:id="@+id/finish_load"
+        android:textColor="#fff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_radius"/>
+    <Button
+
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="فحص"
+        android:id="@+id/scan"
+        android:textColor="#fff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_radius"/>
+</RelativeLayout>
+
+    <TextView
+        android:visibility="gone"
+       android:textSize="10dp"
+     android:layout_alignParentBottom="true"
+        android:layout_marginTop="40dp"
+        android:id="@+id/nfc_contents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</RelativeLayout>

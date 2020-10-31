@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nfc.connect.nfc.Farm.Product_FarmActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:gravity="center"
+
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/half_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_centerHorizontal="true"
+
+        >
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:layout_marginTop="50dp"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:text="تفريغ "
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/farm_back1"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/img_back"
+        android:layout_marginTop="50dp"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:text="تسجيل المزرعه "
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content" />
+
+
+    <Spinner
+        android:gravity="left"
+
+        android:background="@drawable/spinner"
+        android:spinnerMode="dropdown"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/spinner2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="fill_parent"
+        android:prompt="@string/type_prompt"
+        android:layout_height="wrap_content"/>
+    <Spinner
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="left"
+
+        android:background="@drawable/spinner"
+        android:spinnerMode="dropdown"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/spinner2"
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:prompt="@string/type_prompt"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:id="@+id/linear1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/spinner"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/piece"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="قطعه"
+                android:layout_marginRight="20dp"/>
+
+            <RadioButton
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جمله"
+                android:layout_marginRight="30dp"/>
+        </RadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="نوع التحميل"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="استعلام"
+        android:background="@drawable/button_radius"
+        android:id="@+id/inform"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/linear1"
+        />
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/infrom_text"
+        android:layout_below="@+id/inform"/>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="60dp"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="فحص"
+        android:id="@+id/product_load"
+        android:textColor="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_radius"/>
+</RelativeLayout>
